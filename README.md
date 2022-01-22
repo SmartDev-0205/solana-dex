@@ -1,31 +1,5 @@
 <div align="center">
-  <img height="170" src="http://github.com/project-serum/awesome-serum/blob/master/logo-serum.png?raw=true" />
-
-  <h1>serum-dex</h1>
-
-  <p>
-    <strong>Project Serum Rust Monorepo</strong>
-  </p>
-
-  <p>
-    <a href="https://travis-ci.com/project-serum/serum-dex"><img alt="Build Status" src="https://travis-ci.com/project-serum/serum-dex.svg?branch=master" /></a>
-    <a href="https://discord.com/channels/739225212658122886"><img alt="Discord Chat" src="https://img.shields.io/discord/739225212658122886?color=blueviolet" /></a>
-    <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/github/license/project-serum/serum-dex?color=blue" /></a>
-  </p>
-
-  <h4>
-    <a href="https://projectserum.com/">Website</a>
-    <span> | </span>
-    <a href="https://discord.gg/HSeFXbqsUX">Discord</a>
-    <span> | </span>
-    <a href="https://github.com/project-serum/awesome-serum">Awesome</a>
-    <span> | </span>
-    <a href="https://dex.projectserum.com/#/">DEX</a>
-    <span> | </span>
-    <a href="https://github.com/project-serum/serum-ts">TypeScript</a>
-  </h4>
-</div>
-
+  
 ## Program Deployments
 
 | Program | Devnet | Mainnet Beta |

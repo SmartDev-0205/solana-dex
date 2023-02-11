@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: "baloo thambi 2" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+.orderbook-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.ant-select-selector {
+  border: none !important;
+}
+
+.market-detail {
+  background-color: #090B0B;
+  display: flex;
+  gap: 10px;
+  padding-left: 31px;
+  font-size: 18;
+  line-height: 10px;
+}
+
+.detail-title {
+  font-weight: 600;
+  color: #E6BE4B;
+}
+
+.init-modal {
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+
+}
+
+.init-modal>.ant-modal-content {
+  background: #171717;
+  border-radius: 8px;
+}
+
+.space {
+  height: 30px;
+}
+
+.modal-more-info {
+  font-family: 'Baloo Thambi 2';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+  color: #E6BE4B;
+}
+
+.connect-button-container {
+  border-radius: 16px;
+  border: 2px solid white;
+  display: flex;
+  font-size: 20px !important;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.connect-button-container>.ant-btn {
+  font-size: 30px;
+}
+
+.connect-button-container {
+  padding: 10px 20px;
+  /* height: 50px; */
+}
+
+.connect-button-container button {
+  border: none;
+  font-size: 30px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.connect-button-container button svg {
+  font-size: 30px !important;
+}
+
+*,
+div {
+  box-sizing: border-box;
+}
+
+.wallet-menu {
+  font-size: 25px;
+}
+
+.ant-select-selector {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+}
+
+.ant-select-selection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.ant-select-selection-item strong {
+  width: 100%;
+}
+
+.ant-dropdown {
+  width: 180px !important;
+  font-size: 25px !important;
+}
+
+.ant-dropdown span {
+  font-size: 20px !important;
+}
+
+.ant-select-arrow {
+  padding-right: 25px;
+  font-size: 25px !important;
+  font-weight: 600;
+  color: white !important;
+  top: 30px !important;
+}
+
+.ant-select-selector {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.assert {
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.currency {
+  width: 60px;
+  padding-bottom: 20px;
+}
+
+.header-container {
+  background: #090B0B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 68px 20px 66px;
+  flex-wrap: wrap;
+  position: relative;
+}
+/* .thin-scroll{
+  width: 100%;
+} */
+
+@media (max-width:600px) {
+  .header-container {
+    padding: 20px;      
+    gap: 20px;
+  }
+  .main-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-logo img{
+    margin: 0px !important;
+  }
+  .header-container .wallet-connect-btn{
+    position: absolute;
+    top: 27px;
+    right: 20px;
+  }
+}

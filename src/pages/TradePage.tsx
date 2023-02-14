@@ -10,7 +10,6 @@ import {
   getTradePageUrl,
   useMarket,
   useMarketsList,
-  useUnmigratedDeprecatedMarkets,
   //useMarkPrice,
 } from '../utils/markets';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
@@ -19,8 +18,6 @@ import { useHistory, useParams } from 'react-router-dom';
 import CustomMarketDialog from '../components/CustomMarketDialog';
 import DeprecatedMarketsInstructions from '../components/DeprecatedMarketsInstructions';
 import LinkAddress from '../components/LinkAddress';
-// eslint-disable-next-line 
-//import { MarketInfo } from '../utils/types';
 import Orderbook from '../components/Orderbook';
 import StandaloneBalancesDisplay from '../components/StandaloneBalancesDisplay';
 import { TVChartContainer } from '../components/TradingView'

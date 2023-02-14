@@ -3,6 +3,8 @@ import { useMemo } from 'react';
 import { USE_MARKETS } from './markets';
 import { sleep } from './utils';
 
+const BASEURL = 'https://dry-ravine-67635.herokuapp.com'
+// const BASEURL = 'http://127.0.0.1:5000'
 const configurationData = {
   supported_resolutions: ['5', '15', '60', '120', '240', '1D'],
 }
@@ -114,7 +116,7 @@ const makeDataFeed = () => {
 
       try {
         const result = await getApi(
-          `https://dry-ravine-67635.herokuapp.com/tv/history?symbol=${symbolName}&resolution=${resolution}&from=${from}&to=${to}`
+          `${BASEURL}/tv/history?symbol=${symbolName}&resolution=${resolution}&from=${from}&to=${to}`
         )
         if (result.c.length === 0) {
           overTime[key] = to
@@ -170,7 +172,7 @@ const makeDataFeed = () => {
           lastReqTime[subscriberUID] = new Date().getTime()
 
           const candle = await getApi(
-            `https://dry-ravine-67635.herokuapp.com/tv/history?symbol=SOL%2FUSDC&resolution=${resolution}&from=${from}&to=${to}`
+            `${BASEURL}/tv/history?symbol=SOL%2FUSDC&resolution=${resolution}&from=${from}&to=${to}`
           )
 
           for (const item of parseCandles(candle)) {
@@ -230,6 +232,8 @@ const reduceTs = (ts: number, resolutionTv: string) => {
       return ts - 60 * 120;
     case '240':
       return ts - 60 * 240;
+    case '600':
+      return ts - 60 * 600;
     case '720':
       return ts - 60 * 720;
     case '1D':

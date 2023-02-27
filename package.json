@@ -47,7 +47,8 @@
   },
   "scripts": {
     "predeploy": "git pull --ff-only && yarn && yarn build",
-    "deploy": "gh-pages -d build",
+    "deploy": "aws s3 sync build/ s3://reawct-0205",
+    "prod": "yarn build && yarn deploy",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",

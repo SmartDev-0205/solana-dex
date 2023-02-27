@@ -3,8 +3,8 @@ import { useMemo } from 'react';
 import { USE_MARKETS } from './markets';
 import { sleep } from './utils';
 
-const BASEURL = 'https://dry-ravine-67635.herokuapp.com'
-// const BASEURL = 'http://127.0.0.1:5000'
+// const BASEURL = 'https://dry-ravine-67635.herokuapp.com'
+const BASEURL = 'https://basicbleu.com/'
 const configurationData = {
   supported_resolutions: ['5', '15', '60', '120', '240', '1D'],
 }

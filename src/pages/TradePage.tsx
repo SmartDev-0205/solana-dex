@@ -1,4 +1,4 @@
-import { Avatar,Col, Popover, Row, Select, Modal } from 'antd';
+import { Avatar, Col, Popover, Row, Select, Modal } from 'antd';
 import {
   DeleteOutlined,
   InfoCircleOutlined,
@@ -12,7 +12,7 @@ import {
   useMarketsList,
   //useMarkPrice,
 } from '../utils/markets';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 
 import CustomMarketDialog from '../components/CustomMarketDialog';
@@ -31,7 +31,6 @@ import FloatingElement from '../components/layout/FloatingElement';
 import ModalHeaderImg from '../assets/modal_header_pic.png'
 
 
-
 const { Option, OptGroup } = Select;
 
 const Wrapper = styled.div`
@@ -45,12 +44,12 @@ const Wrapper = styled.div`
 `;
 
 export default function TradePage() {
-  const { marketAddress } = useParams();
+  let { marketAddress } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(true);
-
   const handleOk = () => {
     setIsModalOpen(false);
   };
+
 
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -74,7 +73,7 @@ export default function TradePage() {
       >
         <TradePageInner />
       </MarketProvider>
-      <Modal visible={isModalOpen} footer={null} onOk={handleOk} onCancel={()=>handleCancel()} className="init-modal">
+      <Modal visible={isModalOpen} footer={null} onOk={handleOk} onCancel={() => handleCancel()} className="init-modal">
         <img src={ModalHeaderImg} style={{ height: "94px" }} alt="" />
         <div className="space" />
         <p>The SWOLE DEX is a fully decentralized exchange. No representation or warranty is made concerning any aspect of the SWOLE DEX, including its suitability, quality, availability, accessibility, accuracy or safety. Access to and use of the SWOLE DEX is entirely at users’ own risk and could lead to substantial losses. Users take full responsibility for their use of the SWOLE DEX, including participation in the sale or purchase of any products, including, without limitation, tokens and coins.</p>
@@ -257,6 +256,14 @@ function MarketSelector({
     )
     ?.address?.toBase58();
 
+  useEffect(() => {
+    if (!selectedMarket) {
+      onSetMarketAddress("GpHbiJJ9VHiuHVXeoet121Utrbm1CSNNzYrBKB8Xz2oz");
+    }
+  }, []);
+
+
+  console.log("selectedMarket", selectedMarket);
   return (
     <Select
       showSearch

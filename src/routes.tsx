@@ -17,9 +17,7 @@ export function Routes() {
       <HashRouter basename={'/'}>
         <BasicLayout>
           <Switch>
-            <Route exact path="/">
-              <Redirect to={getTradePageUrl()} />
-            </Route>
+            
             <Route exact path="/market/:marketAddress">
               <TradePage />
             </Route>
@@ -40,6 +38,12 @@ export function Routes() {
             <Route exact path="/pools/:poolAddress">
               <PoolPage />
             </Route>
+
+            <Route  path="/">
+              {/* <Redirect to={getTradePageUrl()} /> */}
+              <TradePage />
+            </Route>
+
           </Switch>
         </BasicLayout>
       </HashRouter>
